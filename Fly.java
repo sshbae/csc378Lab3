@@ -81,7 +81,7 @@ public class Fly  extends AnimatedActor
             angleFlyDuration = 10;
         }
         //Sonar Charge detection
-        SonarCharge sc = (SonarCharge) getOneIntersectingObject(SonarCharge.class);
+     /*   SonarCharge sc = (SonarCharge) getOneIntersectingObject(SonarCharge.class);
             if (sc != null)
             {
                 if (sc.getX() > getX())
@@ -96,7 +96,7 @@ public class Fly  extends AnimatedActor
                 
                 
                 setLocation(x,y);
-            }
+            }*/
         
          
         //edge detection
