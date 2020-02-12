@@ -8,9 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
-    private int y_max = 300;
+    private int yMax = 300;
     private int vy = 0;
-    private int frame_num = 0;
+    private int wobbleDegree = 5;
+    private int wobbleCounter = 0;
     
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
@@ -18,8 +19,7 @@ public class Player extends Actor
      */
     public void act() 
     {
-        // make him look like he's walking
-        if (getY() != y_max) {
+        if (getY() != yMax) {
             vy += 1;
         }
         else {
@@ -28,14 +28,22 @@ public class Player extends Actor
                 vy -= 15;
             }
         }
-        setLocation(getX(), Math.min(getY() + vy, y_max));
+        setLocation(getX(), Math.min(getY() + vy, yMax));
         
-        if (Greenfoot.isKeyDown("left") or Greenfoot.isKeyDown("right")) {
+        if (Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("right")) {
             wobble();
+            setRotation(0);
         }
     }
     
-    private void act() {
-        int i = 0;
+    private void wobble() {
+        if (wobbleCounter == 5) {
+            wobbleDegree *= -1;
+            setRotation(wobbleDegree);
+            wobbleCounter = 0;
+        }
+        else {
+            wobbleCounter += 1;
+        }
     }
 }
