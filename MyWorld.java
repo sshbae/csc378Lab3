@@ -6,9 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
+
 public class MyWorld extends World
 {
-
+private int level = 1;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -28,5 +29,14 @@ public class MyWorld extends World
     {
         Player player = new Player();
         addObject(player,100,300);
+    }
+        public void upLevel()
+    {
+        level++;
+    }
+    
+    public int getLevel()
+    {
+        return level;
     }
 }
