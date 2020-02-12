@@ -18,7 +18,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Michael Kolling
  * @version 1.0 (July 2007)
  */
-public class Mover extends Actor
+public class Mover extends Thing
 {
     private static final double WALKING_SPEED = 0.2;
     public boolean directionL = true;

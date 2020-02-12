@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Player extends Actor
+public class Player extends ScrollingActor
 {
     private int yMax = 300;
     private int vy = 0;
@@ -30,7 +30,13 @@ public class Player extends Actor
         }
         setLocation(getX(), Math.min(getY() + vy, yMax));
         
-        if (Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("right")) {
+        if (Greenfoot.isKeyDown("left")) {
+            setLocation(getX() - 3, getY());
+            wobble();
+            setRotation(0);
+        }
+        if (Greenfoot.isKeyDown("right")) {
+            setLocation(getX() + 3, getY());
             wobble();
             setRotation(0);
         }
