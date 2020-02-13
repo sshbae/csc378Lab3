@@ -3,6 +3,7 @@ class.Fart.image=fart_shot1.png
 class.FartRay.image=shooter.png
 class.Fly.image=flyL0.png
 class.MyWorld.image=background.jpg
+class.Platform.image=roll.png
 class.Player.image=tile000.png
 class.ScrollingWorld.image=background.jpg
 class.TP.image=tpL0.png
@@ -10,6 +11,7 @@ dependency1.from=ScrollingWorld
 dependency1.to=ScrollingActor
 dependency1.type=UsesDependency
 dependency10.from=Fly
+<<<<<<< HEAD
 dependency10.to=MyWorld
 dependency10.type=UsesDependency
 dependency11.from=Fly
@@ -27,6 +29,13 @@ dependency14.type=UsesDependency
 dependency15.from=FartRay
 dependency15.to=Fart
 dependency15.type=UsesDependency
+=======
+dependency10.to=Player
+dependency10.type=UsesDependency
+dependency11.from=Player
+dependency11.to=TP
+dependency11.type=UsesDependency
+>>>>>>> 1a03e151565646071f984e8b5e971d2fe3593f45
 dependency2.from=ScrollingWorld
 dependency2.to=WorldElement
 dependency2.type=UsesDependency
@@ -34,6 +43,7 @@ dependency3.from=MyWorld
 dependency3.to=Player
 dependency3.type=UsesDependency
 dependency4.from=MyWorld
+<<<<<<< HEAD
 dependency4.to=FartRay
 dependency4.type=UsesDependency
 dependency5.from=MyWorld
@@ -58,6 +68,32 @@ editor.fx.0.y=85
 height=777
 package.numDependencies=15
 package.numTargets=12
+=======
+dependency4.to=TP
+dependency4.type=UsesDependency
+dependency5.from=Thing
+dependency5.to=ScrollingActor
+dependency5.type=UsesDependency
+dependency6.from=Thing
+dependency6.to=ScrollingWorld
+dependency6.type=UsesDependency
+dependency7.from=TP
+dependency7.to=MyWorld
+dependency7.type=UsesDependency
+dependency8.from=TP
+dependency8.to=Player
+dependency8.type=UsesDependency
+dependency9.from=Fly
+dependency9.to=MyWorld
+dependency9.type=UsesDependency
+editor.fx.0.height=722
+editor.fx.0.width=800
+editor.fx.0.x=240
+editor.fx.0.y=41
+height=777
+package.numDependencies=11
+package.numTargets=11
+>>>>>>> 1a03e151565646071f984e8b5e971d2fe3593f45
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -129,7 +165,11 @@ target5.width=120
 target5.x=0
 target5.y=0
 target6.height=50
+<<<<<<< HEAD
 target6.name=Mover
+=======
+target6.name=Platform
+>>>>>>> 1a03e151565646071f984e8b5e971d2fe3593f45
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=80
@@ -159,5 +199,10 @@ target9.y=0
 version=3.0.0
 width=1280
 world.lastInstantiated=MyWorld
+<<<<<<< HEAD
 xPosition=77
 yPosition=33
+=======
+xPosition=0
+yPosition=23
+>>>>>>> 1a03e151565646071f984e8b5e971d2fe3593f45
