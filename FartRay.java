@@ -8,6 +8,8 @@ import java.util.List;
  */
 public class FartRay extends ScrollingActor
 {
+    private boolean isHeld = false;
+    
     /**
      * Act - do whatever the FartRay wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,15 +17,17 @@ public class FartRay extends ScrollingActor
     public void act() 
     {
         super.act();
+        setRotation(20);
         if (isTouching(Player.class)){
             Player p = (Player) getOneIntersectingObject(Player.class);
             setLocation(p.getX()+30,p.getY()-10);
+            isHeld = true;
         }
-        if (Greenfoot.isKeyDown("space"))
+        if (Greenfoot.isKeyDown("space") && isHeld)
         {
             Greenfoot.playSound("fart.wav");
             Fart f = new Fart();
-            getWorld().addObject(f,getX()+10,getY());
+            getWorld().addObject(f,getX()+40,getY()-10);
         }
     }    
 }
