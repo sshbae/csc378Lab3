@@ -15,9 +15,15 @@ public class FartRay extends ScrollingActor
     public void act() 
     {
         super.act();
-        if(isTouching(Player.class)){
-          Player p = (Player) getOneIntersectingObject(Player.class);
-          setLocation(p.getX()+30,p.getY()-10);
+        if (isTouching(Player.class)){
+            Player p = (Player) getOneIntersectingObject(Player.class);
+            setLocation(p.getX()+30,p.getY()-10);
+        }
+        if (Greenfoot.isKeyDown("space"))
+        {
+            Greenfoot.playSound("fart.wav");
+            Fart f = new Fart();
+            getWorld().addObject(f,getX()+10,getY());
         }
     }    
 }

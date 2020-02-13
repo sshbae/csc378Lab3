@@ -33,7 +33,7 @@ private int level = 1;
         addObject(player,getWidth()/2,300);
         addObject(fartRay,player.getX()+150, 200);
         for (int x = getWidth() * -5 + getWidth(); x < getWidth() * 5; x += getWidth()) {
-                addObject(new TP(), x+600, 310);
+                addObject(new TP(), x+600,310);
         }
     }
         public void upLevel()

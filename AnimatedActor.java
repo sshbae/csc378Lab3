@@ -38,7 +38,6 @@ public class AnimatedActor extends Mover
             imagesL[i] = new GreenfootImage(basename + 'L' + i + suffix);
             imagesR[i] = new GreenfootImage(imagesL[i]);
             imagesR[i].mirrorHorizontally();
-//            imagesR[i] = new GreenfootImage(basename + 'R' + i + suffix);
         }
         
         setImage(imagesL[currentImage]);
