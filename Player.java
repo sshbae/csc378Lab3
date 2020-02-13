@@ -52,10 +52,11 @@ public class Player extends ScrollingActor
         {  
             setLocation(getX()-collisionThrowDirectionX*collisionForce,getY()+1);
             collisionThrowDistance--;
+
         }
         else 
         {
-                
+            setImage(reg);                
             TP t = (TP) getOneIntersectingObject(TP.class);
             if (t != null)
             {
