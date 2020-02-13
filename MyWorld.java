@@ -29,11 +29,16 @@ private int level = 1;
     private void prepare()
     {
         Player player = new Player();
+        FartRay fartRay = new FartRay();
         addObject(player,getWidth()/2,300);
-
+        addObject(fartRay,player.getX()+150, 200);
         for (int x = getWidth() * -5 + getWidth(); x < getWidth() * 5; x += getWidth()) {
+<<<<<<< HEAD
                 addObject(new TP(), x+600, 280);
 
+=======
+                addObject(new TP(), x+600,310);
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
         }
     }
         public void upLevel()

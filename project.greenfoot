@@ -1,6 +1,11 @@
 #Greenfoot project file
+<<<<<<< HEAD
 class.CutScene.image=background.jpg
 class.CutSceneImage.image=tile000.png
+=======
+class.Fart.image=fart_shot1.png
+class.FartRay.image=shooter.png
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 class.Fly.image=flyL0.png
 class.MyWorld.image=background.jpg
 class.Platform.image=roll.png
@@ -13,17 +18,44 @@ dependency1.from=ScrollingWorld
 dependency1.to=ScrollingActor
 dependency1.type=UsesDependency
 dependency10.from=Fly
+<<<<<<< HEAD
+dependency10.to=MyWorld
+=======
+<<<<<<< HEAD
 dependency10.to=MyWorld
 dependency10.type=UsesDependency
 dependency11.from=Fly
 dependency11.to=Player
 dependency11.type=UsesDependency
+dependency12.from=Fart
+dependency12.to=TP
+dependency12.type=UsesDependency
+dependency13.from=Player
+dependency13.to=TP
+dependency13.type=UsesDependency
+dependency14.from=FartRay
+dependency14.to=Player
+dependency14.type=UsesDependency
+dependency15.from=FartRay
+dependency15.to=Fart
+dependency15.type=UsesDependency
+=======
+dependency10.to=Player
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
+dependency10.type=UsesDependency
+dependency11.from=Fly
+dependency11.to=Player
+dependency11.type=UsesDependency
+<<<<<<< HEAD
 dependency12.from=TP
 dependency12.to=MyWorld
 dependency12.type=UsesDependency
 dependency13.from=TP
 dependency13.to=Player
 dependency13.type=UsesDependency
+=======
+>>>>>>> 1a03e151565646071f984e8b5e971d2fe3593f45
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 dependency2.from=ScrollingWorld
 dependency2.to=WorldElement
 dependency2.type=UsesDependency
@@ -31,6 +63,32 @@ dependency3.from=MyWorld
 dependency3.to=Player
 dependency3.type=UsesDependency
 dependency4.from=MyWorld
+<<<<<<< HEAD
+dependency4.to=FartRay
+dependency4.type=UsesDependency
+dependency5.from=MyWorld
+dependency5.to=TP
+dependency5.type=UsesDependency
+dependency6.from=Thing
+dependency6.to=ScrollingActor
+dependency6.type=UsesDependency
+dependency7.from=Thing
+dependency7.to=ScrollingWorld
+dependency7.type=UsesDependency
+dependency8.from=TP
+dependency8.to=MyWorld
+dependency8.type=UsesDependency
+dependency9.from=TP
+dependency9.to=Player
+dependency9.type=UsesDependency
+editor.fx.0.height=722
+editor.fx.0.width=808
+editor.fx.0.x=470
+editor.fx.0.y=85
+height=777
+package.numDependencies=15
+package.numTargets=12
+=======
 dependency4.to=TP
 dependency4.type=UsesDependency
 dependency5.from=TitleScene
@@ -53,8 +111,14 @@ editor.fx.0.width=800
 editor.fx.0.x=120
 editor.fx.0.y=48
 height=777
+<<<<<<< HEAD
 package.numDependencies=13
 package.numTargets=16
+=======
+package.numDependencies=11
+package.numTargets=11
+>>>>>>> 1a03e151565646071f984e8b5e971d2fe3593f45
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -77,20 +141,29 @@ target1.width=150
 target1.x=0
 target1.y=0
 target10.height=50
+<<<<<<< HEAD
 target10.name=Mover
+=======
+target10.name=Fart
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 target10.showInterface=false
 target10.type=ClassTarget
-target10.width=80
+target10.width=100
 target10.x=0
 target10.y=0
 target11.height=50
+<<<<<<< HEAD
 target11.name=CutScene
+=======
+target11.name=MyWorld
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=Fly
 target12.showInterface=false
 target12.type=ClassTarget
@@ -125,6 +198,14 @@ target16.type=AbstractTarget
 target16.width=80
 target16.x=0
 target16.y=0
+=======
+target12.name=Thing
+target12.showInterface=false
+target12.type=AbstractTarget
+target12.width=80
+target12.x=0
+target12.y=0
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 target2.height=50
 target2.name=ScrollingActor
 target2.showInterface=false
@@ -140,27 +221,44 @@ target3.width=80
 target3.x=0
 target3.y=0
 target4.height=50
+<<<<<<< HEAD
 target4.name=Platform
+=======
+target4.name=WorldElement
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 target4.showInterface=false
 target4.type=ClassTarget
-target4.width=80
+target4.width=110
 target4.x=0
 target4.y=0
 target5.height=50
+<<<<<<< HEAD
 target5.name=Poop
+=======
+target5.name=AnimatedActor
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 target5.showInterface=false
 target5.type=ClassTarget
-target5.width=80
+target5.width=120
 target5.x=0
 target5.y=0
 target6.height=50
+<<<<<<< HEAD
 target6.name=WorldElement
+=======
+<<<<<<< HEAD
+target6.name=Mover
+=======
+target6.name=Platform
+>>>>>>> 1a03e151565646071f984e8b5e971d2fe3593f45
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=110
 target6.x=0
 target6.y=0
 target7.height=50
+<<<<<<< HEAD
 target7.name=CutSceneImage
 target7.showInterface=false
 target7.type=ClassTarget
@@ -169,20 +267,48 @@ target7.x=0
 target7.y=0
 target8.height=50
 target8.name=AnimatedActor
+=======
+target7.name=Fly
+target7.showInterface=false
+target7.type=ClassTarget
+target7.width=80
+target7.x=0
+target7.y=0
+target8.height=50
+target8.name=FartRay
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=120
 target8.x=0
 target8.y=0
 target9.height=50
+<<<<<<< HEAD
 target9.name=TextBubble
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=90
+=======
+target9.name=TP
+target9.showInterface=false
+target9.type=ClassTarget
+target9.width=80
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
 target9.x=0
 target9.y=0
 version=3.0.0
 width=1280
+<<<<<<< HEAD
 world.lastInstantiated=TitleScene
 xPosition=0
 yPosition=24
+=======
+world.lastInstantiated=MyWorld
+<<<<<<< HEAD
+xPosition=77
+yPosition=33
+=======
+xPosition=0
+yPosition=23
+>>>>>>> 1a03e151565646071f984e8b5e971d2fe3593f45
+>>>>>>> 12a5393a8d7f16e415cd754b3b3725a5b940b960
