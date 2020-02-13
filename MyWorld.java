@@ -31,10 +31,9 @@ private int level = 1;
         Player player = new Player();
         addObject(player,getWidth()/2,300);
 
-        for (int x = getWidth() * -3 + getWidth()/2; x < getWidth() * 3; x += getWidth()) {
-            for (int y = getHeight() * -3 + getHeight()/4; y < getHeight() * 3; y += getHeight()) {
-                addObject(new TP(), x, y);
-            }
+        for (int x = getWidth() * -5 + getWidth(); x < getWidth() * 5; x += getWidth()) {
+                addObject(new TP(), x+600, 310);
+
         }
     }
         public void upLevel()

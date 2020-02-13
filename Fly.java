@@ -64,8 +64,6 @@ public class Fly  extends AnimatedActor
                 setLocation(getX(),getY()+2);
               else
                 setLocation(getX(),getY()-2);
-              
-              //detect nearby debris
          }
          
          
