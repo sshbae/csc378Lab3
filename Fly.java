@@ -1,17 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 
-/**
- * Write a description of class Fly here.
- * 
- * @author Foaad Khosmood
- * @version (a version number or a date)
- */
 public class Fly  extends AnimatedActor
 {
-    private int waitBetween=0;
     private int angleFlyDuration=0;
     private static int ANGLE_FLY_MAX=50;
+    public boolean dead = false;
+    public boolean died = false;
     
     
     public Fly()
@@ -25,25 +20,32 @@ public class Fly  extends AnimatedActor
     public void act() 
     {
         int x,y;
+        if (dead){
+        }
+        else if (died){
+            getImage().mirrorVertically();
+            getImage().setTransparency(100);
+            dead = true;
+        }
+        else{
         super.act();
         
         List players = getNeighbours(20+((MyWorld) getWorld()).getLevel()*10, false, Player.class);
         
-        if (players.isEmpty() || waitBetween > 0) //normal movement
+        if (players.isEmpty()) //normal movement
         {
             if (super.directionL)
                 move(-1.0);
             else
                 move(1.0);
          }
-         else if (waitBetween < 1) //go toward the Player
+         else
          {
              Player player = (Player) players.get(0);
              if (player.getX() < getX())
              {
                  if (!super.directionL)
                     {
-                        waitBetween = 40;
                         turn();
                     }
                     
@@ -53,7 +55,6 @@ public class Fly  extends AnimatedActor
              {
                  if(super.directionL)
                     {
-                        waitBetween = 40;
                         turn();
                     }
                     
@@ -66,37 +67,15 @@ public class Fly  extends AnimatedActor
                 setLocation(getX(),getY()-2);
          }
          
-         
-         if (waitBetween > 0)
-            waitBetween --;
         
          //actual player collision  
          Player s = (Player) getOneIntersectingObject(Player.class);
          if (s != null)
          {
-            waitBetween = 100;
             setRotation(15);
-            angleFlyDuration = 10;
+            angleFlyDuration = 5;
         }
-        //Sonar Charge detection
-     /*   SonarCharge sc = (SonarCharge) getOneIntersectingObject(SonarCharge.class);
-            if (sc != null)
-            {
-                if (sc.getX() > getX())
-                    x = getX() - 10;
-                else
-                    x = getX() + 10;
-                    
-                if (sc.getY() > getY())
-                    y = getY() - 10;
-                else
-                    y = getY() + 10;
-                
-                
-                setLocation(x,y);
-            }*/
         
-         
         //edge detection
         if (atWorldEdge()) {
            turn(); move();
@@ -114,7 +93,7 @@ public class Fly  extends AnimatedActor
                 setRotation(0);
         }
         else
-            if (Greenfoot.getRandomNumber(1000) > 995)
+            if (Greenfoot.getRandomNumber(1000) > 996)
                 {
                     angleFlyDuration=ANGLE_FLY_MAX;
                     if(Greenfoot.getRandomNumber(2) == 0)
@@ -122,6 +101,6 @@ public class Fly  extends AnimatedActor
                     else
                         turn(-30-Greenfoot.getRandomNumber(30));
                 }
-    }    
+    }  }  
 }
 

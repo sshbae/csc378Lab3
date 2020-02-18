@@ -10,6 +10,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends ScrollingWorld
 {
 private int level = 1;
+private int lives = 5;
+private static GreenfootSound backgroundMusic = new GreenfootSound("music.mp3");
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -20,10 +22,16 @@ private int level = 1;
         super(600, 400, 1); 
         setScrollingBackground(new GreenfootImage("background.jpg"));
         prepare();
+        if (!backgroundMusic.isPlaying())
+            backgroundMusic.playLoop();
     }
     
     public void act()
     {
+        showText("Lives: " + ((Integer)lives).toString(), 100, 10);
+        if (lives < 1)
+            Greenfoot.setWorld(new BadEndScene());
+        
         //showText("Score: " + ((Integer)(-1*getTotalXMovement())).toString(), 100, 10);
     }
 
@@ -38,9 +46,9 @@ private int level = 1;
         addObject(player,getWidth()/2,300);
         addObject(fartRay,player.getX()+150, 200);
         
-        addObject(new Wife(), 2500, 200);
+        addObject(new Wife(), 3000, 200);
 
-        for (int x = getWidth() * -10 + getWidth(); x < getWidth() * 10; x += getWidth()) {
+        for (int x = getWidth() * -15 + getWidth(); x < getWidth() * 15; x += getWidth()) {
             addObject(new TP(), x+600+((int)(Math.random() * 10)), 280);
             addObject(new Fly(), x+625+((int)(Math.random() * 10)), 280);
         }
@@ -50,7 +58,14 @@ private int level = 1;
     {
         level++;
     }
-    
+    public void downLife()
+    {
+        lives--;
+    }
+    public static void stopMusic()
+    {
+        backgroundMusic.stop();
+    }
     public int getLevel()
     {
         return level;

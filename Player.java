@@ -70,7 +70,25 @@ public class Player extends ScrollingActor
                 else
                     collisionThrowDirectionX = 1;
             collisionThrowDistance=20;
+            ((MyWorld)getWorld()).downLife();
             }
+            Fly f = (Fly) getOneIntersectingObject(Fly.class);
+            if (f != null){
+            if (!f.dead)
+            {
+                if (getY() < f.getY() - 50 && Math.abs(getX()- f.getX()) < 70)
+                    f.died=true;
+                else{
+                    setImage(stunned);//Greenfoot.playSound("punch.wav");
+                    if (f.getX() < getX())
+                        collisionThrowDirectionX = -1;
+                    else
+                        collisionThrowDirectionX = 1;
+                    collisionThrowDistance=10;
+                    ((MyWorld)getWorld()).downLife();
+                }
+            }
+        }
         }
     }
     
