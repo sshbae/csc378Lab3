@@ -24,10 +24,7 @@ private int level = 1;
     
     public void act()
     {
-        showText("Score: " + ((Integer)(-1*getTotalXMovement())).toString(), 100, 10);
-        if (getTotalXMovement() < -2000) {
-            Greenfoot.setWorld(new CreditScene());
-        }
+        //showText("Score: " + ((Integer)(-1*getTotalXMovement())).toString(), 100, 10);
     }
 
     /**
@@ -40,9 +37,12 @@ private int level = 1;
         FartRay fartRay = new FartRay();
         addObject(player,getWidth()/2,300);
         addObject(fartRay,player.getX()+150, 200);
+        
+        addObject(new Wife(), 2500, 200);
 
-        for (int x = getWidth() * -5 + getWidth(); x < getWidth() * 5; x += getWidth()) {
-            addObject(new TP(), x+600, 280);
+        for (int x = getWidth() * -10 + getWidth(); x < getWidth() * 10; x += getWidth()) {
+            addObject(new TP(), x+600+((int)(Math.random() * 10)), 280);
+            addObject(new Fly(), x+625+((int)(Math.random() * 10)), 280);
         }
     }
     
