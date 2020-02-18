@@ -36,7 +36,8 @@ public class Player extends ScrollingActor
         else {
             vy = 0;
             if (Greenfoot.isKeyDown("up")) {
-                vy -= 15;
+                Greenfoot.playSound("woohoo.wav");
+                vy -= 18;
             }
         }
         setLocation(getX(), Math.min(getY() + vy, yMax));

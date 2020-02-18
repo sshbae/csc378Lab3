@@ -46,11 +46,18 @@ private static GreenfootSound backgroundMusic = new GreenfootSound("music.mp3");
         addObject(player,getWidth()/2,300);
         addObject(fartRay,player.getX()+150, 200);
         
-        addObject(new Wife(), 3000, 200);
+        addObject(new Wife(), 4500, 200);
 
         for (int x = getWidth() * -15 + getWidth(); x < getWidth() * 15; x += getWidth()) {
+            int y = 337;
             addObject(new TP(), x+600+((int)(Math.random() * 10)), 280);
-            addObject(new Fly(), x+625+((int)(Math.random() * 10)), 280);
+            addObject(new Fly(), x+625+((int)(Math.random() * 10)), 260);
+            addObject(new Platform(), x+600, y);
+            addObject(new Platform(), x+700, y);
+            addObject(new Platform(), x+800, y);
+            addObject(new Platform(), x+900, y);
+            addObject(new Platform(), x+1000, y);
+            addObject(new Platform(), x+1100, y);
         }
     }
     
