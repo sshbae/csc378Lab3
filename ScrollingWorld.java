@@ -63,9 +63,6 @@ public abstract class ScrollingWorld extends World
             if (actor instanceof ScrollingActor) {
                 ((ScrollingActor) actor).setLocation(actor.getX() + xMovement, actor.getY(), false);
             }
-            else if (actor instanceof WorldElement) {
-                ;
-            }
             else {
                 actor.setLocation(actor.getX() + xMovement, actor.getY());
             }

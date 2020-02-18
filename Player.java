@@ -19,13 +19,17 @@ public class Player extends ScrollingActor
     private int collisionForce=5;
     
     GreenfootImage reg = new GreenfootImage("tile000.png");
-    GreenfootImage stunned = new GreenfootImage("tile031.png");
+    GreenfootImage stunned = new GreenfootImage("tile010.png");
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+        if (((MyWorld)getWorld()).getTotalXMovement() > 1000) {
+            Greenfoot.setWorld(new CreditScene());
+        }
+        
         if (getY() != yMax) {
             vy += 1;
         }

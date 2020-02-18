@@ -10,8 +10,10 @@ public class TitleScene extends CutScene
 {
     public int timer = 0;
     public int text_bubble_num = 0;
-    public String[] myStrings = new String[] {"Howdy! My name is Schitt.","I've been separated from my wife! :(", "I need your help getting back to her.","Guide me through obstacles using the arrow keys.","Press space to shoot approaching enemies.","Let's get to it!"};
-
+    public String[] myStrings = new String[] {"Howdy! My name is Schitt.","I've been separated from my wife!", "I need your help getting back to her.","Guide me through obstacles using the arrow keys.","Press space to shoot approaching enemies.","Let's get to it!"};
+    public String[] imageNames = new String[] {"00", "13", "04", "00", "00", "23"};
+    public Poop poop = new Poop();
+    
     /**
      * Constructor for objects of class TitleScene.
      * 
@@ -24,8 +26,12 @@ public class TitleScene extends CutScene
     public void act()
     {
         showText(myStrings[text_bubble_num], 300, 300);
+        showText("(press space to advance)", 300, 360);
+        
+        GreenfootImage tile = new GreenfootImage("tile0" + imageNames[text_bubble_num] + ".png");
+        poop.setImage(tile);
 
-        if (timer == 100 || (Greenfoot.isKeyDown("space") && timer > 10))
+        if (timer == 120 || (Greenfoot.isKeyDown("space") && timer > 10))
         {
             timer = 0;
             text_bubble_num += 1;
@@ -38,14 +44,9 @@ public class TitleScene extends CutScene
             Greenfoot.setWorld(new MyWorld());
         }
     }
-
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
+    
+    public void prepare()
     {
-        Poop poop = new Poop();
-        addObject(poop,307,240);
+        addObject(poop, getWidth()/2,getHeight()/2);
     }
 }
